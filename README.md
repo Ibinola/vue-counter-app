@@ -30,9 +30,9 @@ This will start the application at http://localhost:8080/ and you can access the
 
 ### Project Structure 
 
-The project follows a standard Vue.js project structure, with the source code located in the `src` directory and the entry point for the application in the `main.js` file. The `App.vue` file defines the main application component, which renders the router-view component for handling the application's routes. The `router.js` file defines the routes for the application, and the `pages` directory contains the components for each page.
+The project follows a standard Vue.js project structure, with the source code located in the `src` directory and the entry point for the application in the `main.js` file. The `App.vue` file defines the main application component, which renders the router-view component for handling the application's routes. The `router.js` file defines the routes for the application, and the `views` directory contains the components for each page.
 
-The `store` directory contains the Vuex store, which defines the state and methods for managing the counter component. The `composables` directory contains the reusable counter composable, which provides the increment, decrement, reset, and setValue functions for the counter component.
+The `store` file contains the Vuex store, which defines the state and methods for managing the counter component. The `composables` directory contains the reusable counter composable, which provides the increment, decrement, reset, and setValue functions for the counter component.
 
 
 ### Technologies Used
