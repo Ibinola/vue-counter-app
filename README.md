@@ -2,6 +2,10 @@
 
 This is a simple Vue.js application that demonstrates how to use Vuex for state management and how to create a reusable counter composable. The application consists of a single page with a counter component that displays a count value, increment, decrement, reset, and setValue buttons. The counter component is managed by Vuex, which provides a central store for storing the counter state and methods for manipulating it.
 
+## Live Link
+You can view the live demo of this project by following this [Link](https://ibinola-altschool-frontend-exam-3.netlify.app/)
+
+
 ## Getting Started
 
 To get started with the application, you will need to clone the project repository to your local machine and install the required dependencies using npm or yarn.
