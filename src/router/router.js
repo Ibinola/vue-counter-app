@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import CounterPage from '../views/CounterPage.vue'
+import NotFound from '../views/NotFound.vue'
 
 const routes = [
     {
@@ -16,7 +17,7 @@ const routes = [
     {
         path: '/:catchAll(.*)',
         name: "NotFound",
-        component: () => import('../views/NotFound.vue'),
+        component: NotFound,
     },
 ]
 
