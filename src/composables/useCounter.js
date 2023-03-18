@@ -1,28 +1,26 @@
-import { reactive } from 'vue'
+import { ref } from 'vue'
 
 export default function useCounter(initialValue = 0) {
-    const state = reactive({
-        count: initialValue,
-    })
+    const count = ref(initialValue)
 
     function increment() {
-        state.count++
+        count.value++
     }
 
     function decrement() {
-        state.count--
+        count.value--
     }
 
     function reset() {
-        state.count = initialValue
+        count.value = initialValue
     }
 
     function setValue(value) {
-        state.count = value
+        count.value = value
     }
 
     return {
-        state,
+        count,
         increment,
         decrement,
         reset,

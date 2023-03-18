@@ -1,5 +1,3 @@
-import {RouterLink} from 'vue-router'
-
 <template>
   <div class="not-found">
     <h1>404 - Page not Found</h1>
@@ -30,7 +28,7 @@ import {RouterLink} from 'vue-router'
 import { RouterLink } from "vue-router";
 
 export default {
-  name: "NotFoundPage",
+  name: "NotFound",
   components: {
     RouterLink,
   },

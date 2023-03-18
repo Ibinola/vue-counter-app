@@ -2,13 +2,13 @@
   <div class="counter">
     <h1>Counting is Fun</h1>
     <p>How many times can you click the button? Only one way to find out!</p>
-    <p>{{ counter.state.count }}</p>
+    <p>{{ count }}</p>
     <div class="buttons">
-      <button @click="counter.increment()">Increment</button>
-      <button @click="counter.decrement()">Decrement</button>
-      <button @click="counter.reset()">Reset</button>
-      <input v-model="value" type="number" />
-      <button @click="setValue">Set Value</button>
+      <button @click="increment">+</button>
+      <button @click="decrement">-</button>
+      <button @click="reset">Reset</button>
+      <input type="number" v-model="newValue" />
+      <button @click="setValue(newValue)">Set</button>
     </div>
     <nav>
       <router-link to="/" class="button">Back to Home</router-link>
@@ -69,20 +69,21 @@ nav {
 
 <script>
 import useCounter from "../composables/useCounter.js";
+import { ref } from "vue";
 
 export default {
   setup() {
-    const counter = useCounter();
-    let value = counter.state.count;
+    const { count, increment, decrement, reset, setValue } = useCounter();
 
-    function setValue() {
-      counter.setValue(value);
-    }
+    const newValue = ref(0);
 
     return {
-      counter,
-      value,
+      count,
+      increment,
+      decrement,
+      reset,
       setValue,
+      newValue,
     };
   },
 };
