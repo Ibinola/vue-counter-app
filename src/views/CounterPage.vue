@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h1>Counter Page</h1>
     <CounterApplication />
   </div>
 </template>

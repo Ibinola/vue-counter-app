@@ -1,6 +1,38 @@
+import {RouterLink} from 'vue-router'
+
 <template>
-  <div>
-    <h1>404 Not Found</h1>
+  <div class="not-found">
+    <h1>404 - Page not Found</h1>
     <p>The page you requested could not be found.</p>
+    <router-link to="/">Go back home</router-link>
   </div>
 </template>
+
+<style>
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  font-size: 1.5rem;
+}
+
+.back-link {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #2c3e50;
+}
+</style>
+
+<script>
+import { RouterLink } from "vue-router";
+
+export default {
+  name: "NotFoundPage",
+  components: {
+    RouterLink,
+  },
+};
+</script>
